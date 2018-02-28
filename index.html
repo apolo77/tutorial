@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="Instrucciones para apoyar la interpretación de los registros clínicos presentados en un CD">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">    
+    
+    <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+
+    <title>
+        Revisión de cuentas e historia clínica HPTU
+    </title>
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/logo_hospital.jpg" width="180" alt="logo HPTU" title="Logotipo HPTU">
+        <!--<style>
+        img {
+          float:left;
+        }
+      </style><-->
+        <h1>Tutorial de uso y revisión de la historia clínica</h1>
+        <!--<span>
+        <nav> Inicio | Preguntas frecuentes | Contacto 
+        </nav>
+        </span><-->
+        </header>
+    <section class="main">
+            <div id="introduccion">
+                <article>
+                    <div>
+                        <p>
+                            <h4>Bienvenido, en este sitio podrás encontrar las preguntas más frecuentes que pueden surgir
+                                en el proceso de revisión de soportes de la atención en el Hospital y algunas claves que
+                                harán más eficiente tu trabajo de revisión y auditoría.</h4>
+                        </p>                   
+                    </div>
+                </article>
+                </div>
+            <div id="preguntas_frecuentes">
+                <br/>
+                <br/>
+                <H4>PREGUNTAS FRECUENTES</H4>
+                <br/>
+                <!--<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Escribe tu pregunta..">
+
+                <ul id="myUL">
+                    <li>
+                        <a href="#">Oximetría</a>
+                    </li>
+                    <ul>>
+                        <li>Cómo encontrar los registros de oximetrías</li>
+                    </ul>
+                    <li>
+                        <a href="#">Epicrisis</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Venopunciones</a>
+                    </li>
+                    <li>
+                        <a href="#">Medicamentos</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Notas médicas</a>
+                    </li>
+                    <li>
+                        <a href="#">Transfusiones</a>
+                    </li>
+                    <li>
+                        <a href="#">Diálisis</a>
+                    </li>
+                </ul>--> 
+                <button class="accordion">¿Cómo encontrar los registros de oximetrías?</button>
+                <div class="panel">
+                    <p>Las oximetrías son un procedimiento...</p>
+                </div>
+
+                
+                </div>
+            <div id="videos">
+                <!--boton de seleccion de cada video + fuente del video-->
+                <div class="main-slider">
+                       <div class="item youtube1">
+                       <iframe class="embed-player slide-media" width=auto height=auto src="https://www.youtube.com/embed/V7--8OoOqQc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                         <p class="caption">YouTube</p>
+                       </div>
+                       <div class="item youtube2">
+                       <iframe class="embed-player slide-media" width=auto height=auto src="https://www.youtube.com/embed/MXCwkTho-gM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                       <p class="caption">YouTube</p>
+                       </div>
+                    </div>    
+                </div>
+        </section>
+    <aside>
+            <table style="width:70%" border: 1px solid black>
+
+                </table>
+    </aside>
+    </main>
+    <footer>
+        Derechos Reservados
+        <div>&copy; Hospital Pablo Tobón Uribe, 2018
+        </div>
+    </footer>
+</body>
+</html>
