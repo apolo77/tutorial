@@ -8,7 +8,9 @@ header
     color:white;
     font-size: 18px;
     text-align: center;
+    vertical-align: middle;
     padding: 7px 5px;
+    overflow: auto;
     }
 header span
     {font-size: 15px;
@@ -16,16 +18,16 @@ header span
     }
 
 body main
-    {background:white;
+    {background:blue;
     }
 div#introduccion
-      {margin: auto;
+    {margin: auto;
     margin-top: 0px;
     width: auto;
     height: 30%;
-    background-color: rgb(201, 235, 151);
+    background-color: whitesmoke;
     padding: 20px;
-    font-size: 20px;
+    font-size: 1,5em;
     }
 div#buscador h4
     {text-align: center;
@@ -34,39 +36,75 @@ div#buscador h4
 
     }
 
-@media screen and (min-width:600px) {
-    div#preguntas_frecuentes {
-        float: left;
-        width: 25%;
-        margin: auto;
-        margin-top: 0px;
-        background-color: #D5D5D5;
+div#preguntas_frecuentes {
+    float: left;
+    width:30%;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 0px;
+    background-color: white;
+    box-sizing: border-box;
+    border-style:solid;
+    border-width: 2px;
+    padding: 5px;
         }
-        div#videos {
-          margin-left: 30%;
-        }
-
-      }
-      @media screen and (max-width:599px) {
-        div#preguntas_frecuentes {
-          display: inline;
-        }
-      }
 
 div#preguntas_frecuentes h4
     {text-align: center;
     }
+/*Funcionalidades para aplicar al acordeon de las preguntas frecuentes*/
+#container {
+    margin: 0 auto;
+    width: 50%;
+}
+#accordion input {
+	display: none;
+}
+#accordion label {
+	background: rgb(221, 220, 220);
+	border-radius: .25em;
+	cursor: pointer;
+	display: block;
+	margin-bottom: .125em;
+	padding: .25em 1em;
+	z-index: 20;
+}
+#accordion label:hover {
+    background: rgb(173, 173, 173);
+}
 
+#accordion input:checked + label {
+	background: #ccc;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	color: black;
+    margin-bottom: 0;
+}
+#accordion article {
+	background: #f7f7f7;
+	height:0px;
+	overflow:hidden;
+	z-index:10;
+}
+#accordion article p {
+    padding: 1em;
+    margin-left: 1em;
+}
+/*#accordion input:checked article {
+}*/
+#accordion input:checked ~ article {
+	border-bottom-left-radius: .25em;
+	border-bottom-right-radius: .25em;
+	height: auto;
+	margin-bottom: .125em;
+}
 
-div#preguntas_frecuentes ul
-    {padding: 10px;
-
-    }
 .accordion{
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
+    font-size: 1em;
+    padding: 10px;
     width: 100%;
     text-align: left;
     border: none;
@@ -74,22 +112,14 @@ div#preguntas_frecuentes ul
     transition: 0.4s;
     }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover)*/
-.active, .accordion:hover {
-    background-color: #ccc;
-    }
-
-/*Style the accordion panel. Note: hidden by default */
-.panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-}
+/*CSS para el contenedor de los videos principales*/
 div#videos
-    {width: auto;
+    {float: left;
+    width: auto;
     height: 75%;
-    background-color:black;
+    padding: 0px;
+    background-color:gray;
+    box-sizing: border-box;
     }
 
 /*CSS para el banner de videos del tutorial*/
@@ -150,26 +180,29 @@ div#videos
         transform: scale(1);
     }
     /*Clicking on any thumbnail now should activate the image related to it*/
-    
-aside
-    {background:rgb(167, 170, 173);
+.clearfloat{
+    clear: both;
+}    
+/*aside
+    {background:green;
     font-size: 15px;
     text-align: right;
     padding: 7px 5px;
     float:right;
-    }
+    }*/
 footer
-    {background:#00549F;
+    {background:rgb(1, 42, 78);
     color:white;
+    position: absolute;
     font-size: 15px;
     text-align: right;
     margin: 5px 0px;
-    padding: 5px 0px;
+    padding: 2px 0px;
+    bottom: 0;
+    width: 100%;
+    height: auto;
     }
-footer div
-    {margin: 5px 10px;
-    padding: 10px 5px;
-    }
+
 #descripcion 
     { text-align: center; 
     }
