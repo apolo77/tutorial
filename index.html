@@ -41,35 +41,133 @@
                     </div>
                 </article>
                 </div>
-            <div id="preguntas_frecuentes">
-                <H4>PREGUNTAS FRECUENTES</H4>
-                <section id="accordion">
-                        <div>
-                            <input type="checkbox" id="check-1" />
-                            <label for="check-1"> - ¿Cómo encontrar los registros de oximetrías?</label>
-                            <article>
-                                <p>Las oximetrías son un procedimiento...</p>
-                            </article>
+                <div id="preguntas_frecuentes">
+                        <H4>PREGUNTAS FRECUENTES</H4>
+                    <div class="accordion">
+                            <!-- span to target fix closing accordion -->
+                            <span class="target-fix" id="accordion"></span>
+                                <!-- Primera pregunta -->
+                            <div>
+                                <!-- span to target fix accordion -->
+                                <span class="target-fix" id="accordion1"></span>
+                                
+                                <!-- Link para abrir el accordion, oculto cunado esta abierto --> 
+                                <a href="#accordion1" id="open-accordion1" title="open">- ¿Cómo encontrar los registros de oximetrías?</a>
+                                
+                                <!-- Link to close accordion, hidden when closed -->
+                                <a href="#accordion" id="close-accordion1" title="close">- ¿Cómo encontrar los registros de oximetrías?</a> 
+                                
+                                <!-- Accorion content goes in this div -->
+                                <div class="accordion-content">
+                                    <p>Los registros de oximetría se encuentran en la historia clínica con el término "saturación de oxígeno"; esta información está agrupada en la sección de Monitoreo y otros controles de la carpeta de "Historia Clínica"</p>
+                                </div>
+                            </div>
+                                <!-- Segunda pregunta -->
+                                <div>
+                                    <!-- span to target fix accordion -->
+                                    <span class="target-fix" id="accordion2"></span>
+                                    
+                                    <!-- Link para abrir el accordion, oculto cunado esta abierto --> 
+                                    <a href="#accordion2" id="open-accordion2" title="open">- ¿Cómo entender los registros de medicamentos?</a>
+                                    
+                                    <!-- Link to close accordion, hidden when closed -->
+                                    <a href="#accordion" id="close-accordion2" title="close">- ¿Cómo entender los registros de medicamentos?</a> 
+                                    
+                                    <!-- Accorion content goes in this div -->
+                                    <div class="accordion-content">
+                                        <p>Los medicamentos e insumos están disponibles en el archivo (carpeta) de "Historia Clínica", Los registros de cada aplicación están consignados en una tabla que incluye información de la presentación de medicamento y posología formulada (dosis, vía, frecuencia y duración).
+                                            <br/> Los registros no están agrupados por la totalidad del medicamento administrada, estos se encuentran registrados en orden cronológico y de acuerdo a cada aplicación.  
+                                        <br/>Para mayor información pueden consultar el video instruccional.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Tercera pregunta -->
+                                <div>
+                                    <!-- span to target fix accordion -->
+                                    <span class="target-fix" id="accordion3"></span>
+                                    
+                                    <!-- Link para abrir el accordion, oculto cunado esta abierto --> 
+                                    <a href="#accordion3" id="open-accordion3" title="open">- ¿Cuál es la mejor forma para encontrar la cantidad de oxígeno y aire medicinal administrado?</a>
+                                    
+                                    <!-- Link to close accordion, hidden when closed -->
+                                    <a href="#accordion" id="close-accordion3" title="close">- ¿Cuál es la mejor forma para encontrar la cantidad de oxígeno y aire medicinal administrado?</a> 
+                                    
+                                    <!-- Accorion content goes in this div -->
+                                    <div class="accordion-content">
+                                        <p>Tanto el oxígeno como el aire medicinal se registran de forma diaria por el personal de enfermería en la nota de evolución; cada registro contiene la cantidad de tiempo de uso y la cantidad de oxígeno o aire medicina en litros (Lt).</p>
+                                        <br/>Para mayor información pueden consultar el video instruccional.
+                                    </div>
+                                </div>
+                                <!-- Cuarta pregunta -->
+                                <div>
+                                    <!-- span to target fix accordion -->
+                                    <span class="target-fix" id="accordion4"></span>
+                                    
+                                    <!-- Link para abrir el accordion, oculto cunado esta abierto --> 
+                                    <a href="#accordion4" id="open-accordion4" title="open">- ¿Cuál es la forma para revisar los soportes y evidencia de las diálisis?</a>
+                                    
+                                    <!-- Link to close accordion, hidden when closed -->
+                                    <a href="#accordion" id="close-accordion4" title="close">- ¿Cuál es la forma para revisar los soportes y evidencia de las diálisis?</a> 
+                                    
+                                    <!-- Accorion content goes in this div -->
+                                    <div class="accordion-content">
+                                        <p>El esquema de tratamiento de pacientes con falla renal que incluye el manejo y sesiones de diálisis, es un conjunto de notas de todas las personas (médicas y paramédicas) que son los encargados de formular, preparar y asistir a cada sesión de diálisis
+                                            <br/>Algunas de las notas son evolución de médico nefrologo, nota de enfermería pre-diálisis y post-diálisis.  Todas se encuentran en el archivo (carpeta) de "Historia Clínica".
+                                            </p>
+                                    </div>
+                                </div>
+                                <!-- Quinta pregunta -->
+                                <div>
+                                    <!-- span to target fix accordion -->
+                                    <span class="target-fix" id="accordion5"></span>
+                                    
+                                    <!-- Link para abrir el accordion, oculto cunado esta abierto --> 
+                                    <a href="#accordion5" id="open-accordion5" title="open">- ¿Donde se encuentran los registros de medición de glucosa en sangre?</a>
+                                    
+                                    <!-- Link to close accordion, hidden when closed -->
+                                    <a href="#accordion" id="close-accordion5" title="close">- ¿Donde se encuentran los registros de medición de glucosa en sangre?</a> 
+                                    
+                                    <!-- Accorion content goes in this div -->
+                                    <div class="accordion-content">
+                                        <p>Los procedimientos de medición de niveles de glucosa en sangre (glucometrías), pueden realizarse desde exámenes de laboratorio y directamente por equipo de glucometría en las unidades de atención.
+                                            <br/>Las pruebas realizadas en el laboratorio están disponibles en la carpeta denominada "Paraclinicos", en la sección de "Laboratorio"; los resultados de glucometrias tomados en las unidades se encuentran en el archivo (carpeta) denominado "Reporte de controles", con el término de "Glicemia por micrométodo".
+                                            </p>
+                                    </div>
+                                </div>
+                                <!-- Sexta pregunta -->
+                                <div>
+                                    <!-- span to target fix accordion -->
+                                    <span class="target-fix" id="accordion6"></span>
+                                    
+                                    <!-- Link para abrir el accordion, oculto cunado esta abierto --> 
+                                    <a href="#accordion6" id="open-accordion6" title="open">- ¿De qué manera se presentan los soportes que acompañan a la cuenta?</a>
+                                    
+                                    <!-- Link to close accordion, hidden when closed -->
+                                    <a href="#accordion" id="close-accordion6" title="close">- ¿De qué manera se presentan los soportes que acompañan a la cuenta?</a> 
+                                    
+                                    <!-- Accorion content goes in this div -->
+                                    <div class="accordion-content">
+                                        <p>Los documentos que acompañan a la factura, varian de acuerdo al tipo de atención de la siguiente manera:
+                                            <br/>Atenciones de urgencias y atenciones ambulatorias (ayudas diagnósticas, laboratorio y radiología, cirugia ambulatoria, quimioterapia ambulatoria, radioterapia ambulatoria y consulta externa)
+                                            <br/>--Todos los soportes exigidos por la normatividad (resolución 3047 de 2008) como: evidencia de la prestación del servicio recibido firmada por el usuario, detalle de cargos (si aplica),
+                                            </p>
+                                    </div>
+                                </div>
                         </div>
-                        <div>
-                            <input type="checkbox" id="check-2" />
-                            <label for="check-2"> - ¿Cómo entender los registros de medicamentos?</label>
-                            <article>
-                                <p>Los medicamentos e insumos están registrados en ...</p>
-                            </article>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="check-3" />
-                            <label for="check-3"> - ¿Cuál es la mejor forma para encontrar la cantidad de oxígeno y aire medicinal administrado?</label>
-                            <article>
-                                <p>Tanto el oxígeno como el aire medicinal ....</p>
-                            </article>
-                        </div>
-                    </section>
-                </div>
+                    </div>
             <div id="videos">
+                <div id="sliderFrame">
+                    <div id="slider">
+                                    <a class="video" href="https://youtu.be/MXCwkTho-gM">
+                                    <b data-src="imagenes/image-slider-1.jpg">Image Slider</b>
+                                </a>
+                                    <a class="video" href="https://www.youtube.com/watch?v=Answlawb3z0" data-autovideo="1">
+                                    <b data-src="imagenes/image-slider-2.jpg">Slide 5</b>
+                                </a>
+                        </div>
+                    </div>
                 <!--boton de seleccion de cada video + fuente del video-->
-                <div class="main-slider">
+                <!--<div class="main-slider">
                        <div class="item youtube1">
                        <iframe class="embed-player slide-media" width=auto height=auto src="https://www.youtube.com/embed/V7--8OoOqQc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                          <p class="caption">YouTube</p>
@@ -78,7 +176,7 @@
                        <iframe class="embed-player slide-media" width=auto height=auto src="https://www.youtube.com/embed/MXCwkTho-gM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                        <p class="caption">YouTube</p>
                        </div>
-                    </div>    
+                    </div> -->   
                 </div>
         </section>
     <aside>

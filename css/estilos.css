@@ -38,10 +38,10 @@ div#buscador h4
 
 div#preguntas_frecuentes {
     float: left;
-    width:30%;
+    width:40%;
     margin-left: 3px;
     margin-right: 3px;
-    margin-top: 0px;
+    margin-top: 5px;
     background-color: white;
     box-sizing: border-box;
     border-style:solid;
@@ -53,64 +53,96 @@ div#preguntas_frecuentes h4
     {text-align: center;
     }
 /*Funcionalidades para aplicar al acordeon de las preguntas frecuentes*/
-#container {
+.accordion {
+    Position: absolute;
+    margin: 1em auto;
+    width: 39%;
+  }
+  
+  [id*="open-accordion"], [id*="close-accordion"] {
+    background: grey;
+    border-bottom: 1px solid black;
+    line-height: 30px;
+    height: auto;
+    display: block;
     margin: 0 auto;
-    width: 50%;
-}
-#accordion input {
-	display: none;
-}
-#accordion label {
-	background: rgb(221, 220, 220);
-	border-radius: .25em;
-	cursor: pointer;
-	display: block;
-	margin-bottom: .125em;
-	padding: .25em 1em;
-	z-index: 20;
-}
-#accordion label:hover {
-    background: rgb(173, 173, 173);
-}
-
-#accordion input:checked + label {
-	background: #ccc;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
-	color: black;
-    margin-bottom: 0;
-}
-#accordion article {
-	background: #f7f7f7;
-	height:0px;
-	overflow:hidden;
-	z-index:10;
-}
-#accordion article p {
-    padding: 1em;
-    margin-left: 1em;
-}
-/*#accordion input:checked article {
-}*/
-#accordion input:checked ~ article {
-	border-bottom-left-radius: .25em;
-	border-bottom-right-radius: .25em;
-	height: auto;
-	margin-bottom: .125em;
-}
-
-.accordion{
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
+    position: relative;
+    width: 99%;
+  }
+  
+  [id*="close-accordion"] {
+    display: none;
+  }
+  
+  /*Tamaño de la letra de cada pregunta frecuente*/
+  .accordion a {
+    color: #fff;
     font-size: 1em;
-    padding: 10px;
+    font-weight: normal;
+    padding-left: 2%;
+    text-decoration: none;
+    text-shadow: none;
+  }
+  /*Indicador de cada pregunta al estar cerrada*/
+  [id*="open-accordion"]:after, [id*="close-accordion"]:after {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    z-index: 999;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+  }
+  
+  .target-fix {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+  }
+  
+  /*Contenido de cada pregunta al ser seleccionada */
+  .accordion-content {
+    background: #fff;
+    height: 0;
+    margin: 1px auto 0;
+    padding: 0%;
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    }
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    text-align: justify;
+  }
+  
+  .accordion span:target ~ .accordion-content {
+    display: block;
+    height: auto;
+    padding-bottom: 25px;
+    padding-top: 10px;
+  }
+  
+  .accordion span:target ~ [id*="close-accordion"] {
+    display: block;
+  }
+  
+  .accordion span:target ~ [id*="open-accordion"] {
+    display: none;
+  }
+  
+  /*icono que acompaña la pregunta en su titulo*/
+  .accordion span:target ~ [id*="close-accordion"]:after {
+    border-top: 10px solid black;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+
+
+
 
 /*CSS para el contenedor de los videos principales*/
 div#videos
@@ -122,7 +154,85 @@ div#videos
     box-sizing: border-box;
     }
 
-/*CSS para el banner de videos del tutorial*/
+/*Intrucciones para el slider de videos*/
+#sliderFrame, #sliderFrame div {
+    box-sizing: content-box;
+}
+
+#sliderFrame 
+{
+    width:800px;
+    margin: 0 auto; /*center-aligned*/
+}
+  
+#slider, #slider .sliderInner {
+    width:800px;height:406px;/* Must be the same size as the slider images */
+    border-radius: 5px;
+}
+
+#slider {
+    background-color:white;
+    position:relative;
+    transform: translate3d(0,0,0);
+    box-shadow: 0px 1px 5px #e7e4e4;
+}
+
+/* the link style (if an image is wrapped by a link) */
+#slider a.imgLink, #slider .video
+{
+    z-index:2;
+    cursor:pointer;
+    position:absolute;
+    top:0px;left:0px;border:0;padding:0;margin:0;
+    width:100%;height:100%;
+}
+#slider .video {
+    background:transparent url(video.png) no-repeat 50% 50%;
+}
+
+/* ------ built-in navigation bullets wrapper ------*/
+#slider .navBulletsWrapper  {
+    top:320px;
+    text-align:center;
+    background:none;
+    position:relative;
+    z-index:3;
+}
+
+/* each bullet */
+#slider .navBulletsWrapper div 
+{
+    width:11px; height:11px;
+    font-size:0;color:White;/*hide the index number in the bullet element*/
+    background:transparent url(bullet.png) no-repeat 0 0;
+    display:inline-block; *display:inline; zoom:1;
+    overflow:hidden;cursor:pointer;
+    margin:0 6px;/* set distance between each bullet*/
+}
+
+#slider .navBulletsWrapper .active {background-position:0 -11px;}
+
+/* --------- Others ------- */
+
+#slider img, #slider>b, #slider a>b {
+    position:absolute; border:none; display:none;
+}
+
+#slider .sliderInner {
+    overflow:hidden;
+    position:absolute; top:0; left:0;
+}
+
+#slider>a, #slider video, #slider audio {display:none;}
+#slider div {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);             
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+/*CSS para el banner de videos del tutorial- version antigua*/
     .main-slider{
         width: 70%; /*Same as width of the large image*/
         position: left;
@@ -193,7 +303,7 @@ div#videos
 footer
     {background:rgb(1, 42, 78);
     color:white;
-    position: absolute;
+    position: fixed;
     font-size: 15px;
     text-align: right;
     margin: 5px 0px;
